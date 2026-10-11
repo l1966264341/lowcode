@@ -1,5 +1,5 @@
 import { type Component } from 'vue'
-// 属性
+// 属性配置项
 interface PropConfig {
   label: string
   type: 'text' | 'number'
@@ -11,7 +11,7 @@ export interface WidgetItem {
   key: string
   label: string
   component: Component
-  focus: boolean
+  // focus: boolean
   props: Record<string, PropConfig>
 }
 

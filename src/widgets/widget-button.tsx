@@ -25,7 +25,6 @@ export default {
   key: 'button',
   label: '按钮',
   component: markRaw(buttonComponent),
-  focus: false,
   props: {
     content: {
       label: '按钮内容',

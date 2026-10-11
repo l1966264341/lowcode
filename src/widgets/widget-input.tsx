@@ -21,7 +21,6 @@ const inputComponent = defineComponent({
 export default {
   key: 'input',
   label: '输入框',
-  focus: false,
   component: markRaw(inputComponent),
   props: {
     content: {

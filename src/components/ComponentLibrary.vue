@@ -6,8 +6,8 @@ const emit = defineEmits<{
 }>()
 
 // 拖拽起点
-const onDragStart = (e: DragEvent, w: WidgetItem) => {
-  e.dataTransfer!.setData('widget-key', w.key)
+const onDragStart = (e: DragEvent, widgetKey: string) => {
+  e.dataTransfer!.setData('widget-key', widgetKey)
   e.dataTransfer!.effectAllowed = 'copy'
 }
 </script>
@@ -18,7 +18,7 @@ const onDragStart = (e: DragEvent, w: WidgetItem) => {
     v-for="w in widgetList"
     :key="w.key"
     draggable="true"
-    @dragstart="onDragStart($event, w)"
+    @dragstart="onDragStart($event, w.key)"
     @click="emit('add', w)"
     class="widgetBtn"
   >

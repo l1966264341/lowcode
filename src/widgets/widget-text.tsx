@@ -21,7 +21,6 @@ const textComponent = defineComponent({
 export default {
   key: 'text',
   label: '文本',
-  focus: false,
   component: markRaw(textComponent),
   props: {
     content: {
